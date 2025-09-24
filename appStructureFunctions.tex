@@ -1,0 +1,62 @@
+\section{Структурные функции и кинематические формулы}
+\label{app:structure_functions}
+
+Для случая неполяризованного лептона ненулевыми оказываются следующие функции $A_i$:
+\begin{equation}
+    \begin{aligned}
+        A_1(x, y, E) &= y(xy + a), \\
+        A_2(x, y, E) &= 1 - y - \frac{xyM_N}{2E} - \left( \frac{m_{l}}{2E} \right)^2, \\
+        A_3(x, y, E) &= y\left( x\left(1 - \frac{y}{2} \right) - \frac{a}{2} \right), \\
+        A_4(x, y, E) &= a(xy + a), \\
+        A_5(x, y, E) &= -a,
+    \end{aligned}
+\end{equation}
+где $a = m_l^2/(2M_N E)$, а $m_l$ — масса лептона.
+
+В партонной аппроксимации структурные функции выражаются через функции распределения кварков и антикварков:
+\begin{equation}
+    \begin{aligned}
+        F_1(x) &= \frac{1}{2} \sum\limits_{i} e_i^2 \left[ q_i(x) + \bar{q}_i(x) \right], \\
+        F_2(x) &= \sum\limits_{i} e_i^2 x \left[ q_i(x) + \bar{q}_i(x) \right], \\
+        F_3(x) &= \sum\limits_{i} e_i^2 \left[ q_i(x) - \bar{q}_i(x) \right],
+    \end{aligned}
+\end{equation}
+где $e_i$ — заряд $i$-го кварка в единицах заряда электрона.
+
+Допустимый диапазон квадрата полной массы адронной системы задаётся интервалом $W^2 \in [W^2_{\text{cut}}, W_+^2]$, где $W_{\text{cut}}$ — нижний кинематический порог, а $W_+ = \sqrt{s} - m_l$. При этом пороговая энергия нейтрино равна
+\begin{equation}
+    E_\nu^{\text{th}} = \frac{(W_{\text{cut}} + m_l)^2 - M_N^2}{2M_N}.
+\end{equation}
+
+Допустимая область для переменной Бьёркена $x$ ограничивается значениями:
+\begin{equation}
+    x^{-}(W_{\text{cut}}) \le x \le x^{+}(W_{\text{cut}}),
+\end{equation}
+где
+\begin{equation}
+    x^{\pm}(W_{\text{cut}}) = \frac{a \pm \sqrt{b}}{2c},
+\end{equation}
+а параметры $a$, $b$, $c$ выражаются через:
+\begin{equation}
+    \begin{aligned}
+        a(W_{\text{cut}}) &= 1 - \frac{[W_{\text{cut}}^2 - M_N^2 - m_l^2][(W_{\text{cut}}^2 - M_N^2)E_\nu + m_l^2 M_N]}{2M_N^2(W_{\text{cut}}^2 - M_N^2)E_\nu^2}, \\
+        b(W_{\text{cut}}) &= \left[ 1 - \frac{(W_{\text{cut}} - m_l)^2 - M_N^2}{2M_N E_\nu} \right] \left[ 1 - \frac{(W_{\text{cut}} + m_l)^2 - M_N^2}{2M_N E_\nu} \right], \\
+        c(W_{\text{cut}}) &= 1 + \frac{(W_{\text{cut}}^2 - M_N^2 - m_l^2)^2}{4E_\nu^2(W_{\text{cut}}^2 - M_N^2)}.
+    \end{aligned}
+\end{equation}
+
+После выбора $x$ переменная $y$ выбирается из диапазона:
+\begin{equation}
+    y^{\text{min}}(E_\nu, W_{\text{cut}}) \le y \le y^+(E_\nu),
+\end{equation}
+где
+\begin{equation}
+    \begin{aligned}
+        y^{\text{min}}(E_\nu, W_{\text{cut}}) &= \max\left( y^-(E_\nu), y^{\text{cut}}(E_\nu, W_{\text{cut}}) \right), \\
+        y^{\text{cut}}(E_\nu, W_{\text{cut}}) &= \frac{W_{\text{cut}}^2 - M_N^2}{2M_N(1 - x)E_\nu},
+    \end{aligned}
+\end{equation}
+и
+\begin{equation}
+    y^{\pm} = \left[ 1 - \frac{m_l^2}{2E_\nu^2}\left(1 + \frac{E_\nu}{M_N x} \right) \pm \sqrt{ \left(1 - \frac{m_l^2}{2M_N x E_\nu} \right)^2 - \frac{m_l^2}{E_\nu^2} } \right] \left[ 2 + \frac{M_N x}{E_\nu} \right]^{-1}.
+\end{equation}
