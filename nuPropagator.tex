@@ -8,7 +8,7 @@
 \centering
 \includegraphics[width=\linewidth]{images/nupropagator_diagram.png}
 \caption{Структура программного пакета \texttt{nupropagator} и его зависимости.}
-\label{fig:nudisxs1}
+\label{fig:nupropagator1}
 \end{figure}
 
 \subsection{Физическая модель}
@@ -50,14 +50,14 @@ F_{\nu}(x,E) = F^{0}_{\nu}(E)\exp\left(-\frac{x}{\Lambda_{\nu}(x,E)}\right),
 \end{equation}
 где 
 \begin{equation}
-\Lambda_{\nu}(x,E) = \frac{\lambda_{\nu}(E)}{1 - Z_{\nu}(x,E)}.
+\Lambda_{\nu}(x,E) = \frac{\lambda_{\nu}(E)}{1 - \mathcal{Z}_{\nu}(x,E)}.
 \end{equation}
 
 \subsection{Итерационный метод и его реализация}
 
 Решение уравнения для $Z_{\nu}(x,E)$ реализуется итерационно, начиная с $Z^{(0)}$ и строя следующие приближения по схеме:
 \begin{equation}
-Z^{(n+1)}_{\nu}(x,E) = \int\limits_0^x dx' \int\limits_0^1 dy\,\eta_{\nu}(y,E)\Phi_{\nu}(y,E)\exp\left[ -x'D^{(n)}_{\nu}(x',E,E_y) \right],
+\mathcal{Z}^{(n+1)}_{\nu}(x,E) = \int\limits_0^x dx' \int\limits_0^1 dy\,\eta_{\nu}(y,E)\Phi_{\nu}(y,E)\exp\left[ -x'D^{(n)}_{\nu}(x',E,E_y) \right],
 \end{equation}
 где $\eta_{\nu}(y,E)$ — весовой фактор, определяемый формой начального спектра. Точное выражение для $\eta_{\nu}(y,E)$ имеет следующий вид: 
 \begin{equation}
@@ -65,13 +65,14 @@ Z^{(n+1)}_{\nu}(x,E) = \int\limits_0^x dx' \int\limits_0^1 dy\,\eta_{\nu}(y,E)\P
 \end{equation}
 Выражение для фактора $D^{(n)}_{\nu}(x, E, E_y)$ имеет следующий вид:
 \begin{equation}
-    D^{(n)}_{\nu}(x, E, E_y) = \frac{1-Z^{(n)}(x, E_y)}{\lambda(E_y)} - \frac{1-Z^{(n)}(x, E)}{\lambda(E)}
+    D^{(n)}_{\nu}(x, E, E_y) = \frac{1-\mathcal{Z}_{nu}^{(n)}(x, E_y)}{\lambda(E_y)} - \frac{1-\mathcal{Z}_{nu}^{(n)}(x, E)}{\lambda(E)}
 \end{equation}
 Реализация учитывает как исчезновение нейтрино за счёт заряженного тока, так и эффект регенерации от нейтрального тока. Конечная плотность потока описывается экспоненциальным затуханием с учётом эффективной длины пробега:
 \begin{equation}
 P(E,x) = \exp(-x/\lambda_{\nu}(E)), \quad x = \int\rho(l)\,dl.
 \end{equation}
-
+\subsection{Сравнение с другими программными пакетами}
+В данной главе бкдет проведено сравнение результатов, полученных с помощью двух програмнных пакетов: \texttt{nuFATE}~\cite{Vincent_2017} и \texttt{nupropagator}
 \subsection{Дополнительные возможности}
 % (Оставьте место для дополнения при необходимости)
 
