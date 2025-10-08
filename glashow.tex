@@ -1,13 +1,40 @@
-\subsection{Взаимодействие нейтрино с электроном}
-Так как сечение взаимодействия нейтрино с электроном много меньше нуклонов, то в дальнейшем будет учитываться только резонанс Глешоу ($\bar{\nu}_e+e^{-}\to W^{+}$). Для расчета будем использовать следующие формулы для дифференциальных сечений, взятые из работы~\cite{GANDHI199681}:
+\subsection{Сечение взаимодействия $\overline{\nu}_e e$}
+
+Сечение взаимодействия нейтрино с электроном на три порядка меньше, чем с нуклоном, поэтому из взаимодействий с электроном в нашей работе учитывается только резонанс Глэшоу ($\bar{\nu}_e + e^- \to W^+$). Дифференциальные сечения, используемые в расчётах, приведены по работе~\cite{GANDHI199681}.
+
+Сечение реакции $\bar{\nu}_e e \to \bar{\nu}_e e$:
 \begin{equation}
-    \begin{aligned}
-\frac{d\sigma(\bar{\nu}_e e \rightarrow \bar{\nu}_e e)}{dy} 
-&= \frac{G_F^2 m E_\nu}{2\pi} \left[ \frac{R_e^2}{\left( 1 + 2m E_\nu y / M_Z^2 \right)^2}\right]\\ 
-&+ \frac{G_F^2 m E_\nu}{2\pi}\left[\left| \frac{L_e}{1 + 2m E_\nu y / M_Z^2} + \frac{2}{1 - 2m E_\nu / M_W^2 + i F_w / M_w} \right|^2 (1 - y)^2 \right],\\
-\frac{d\sigma(\bar{\nu}_e e \rightarrow \bar{\nu}_\mu \mu)}{dy} 
-&= \frac{G_F^2 m E_\nu}{2\pi} \frac{4(1-y)^2 [1-(\mu^2-m^2)/2mE_\nu]^2}{(1-2mE_\nu/M_W^2)^2 + \Gamma_W^2/M_W^2}, \\
-\frac{d\sigma(\bar{\nu}_e e \rightarrow \text{hadrons})}{dy} 
-&= \frac{d\sigma(\bar{\nu}_e e \rightarrow \bar{\nu}_\mu \mu)}{dy} \frac{\Gamma(W \rightarrow \text{hadrons})}{\Gamma(W \rightarrow \mu \bar{\nu}_\mu)},
+\begin{aligned}
+&\frac{d\sigma(\bar{\nu}_e e \to \bar{\nu}_e e)}{dy} 
+= \frac{G_F^2 m_e E_\nu}{2\pi} 
+    \left[ 
+      \frac{R_e^2}{\left(1 + 2m_e E_\nu y / M_Z^2\right)^2} 
+    \right] \\
+&+ \frac{G_F^2 m_e E_\nu}{2\pi}
+    \left[
+      \left|
+        \frac{L_e}{1 + 2m_e E_\nu y / M_Z^2}
+        + \frac{2}{1 - 2m_e E_\nu / M_W^2 + i\,\Gamma_W / M_W}
+      \right|^2 (1 - y)^2
+    \right],
 \end{aligned}
 \end{equation}
+
+Сечение реакции $\bar{\nu}_e e \to \bar{\nu}_\mu \mu$:
+\begin{equation}
+\frac{d\sigma(\bar{\nu}_e e \to \bar{\nu}_\mu \mu)}{dy} 
+= \frac{G_F^2 m_e E_\nu}{2\pi} 
+   \frac{
+     4(1 - y)^2 \left[ 1 - (\mu^2 - m_e^2)/(2 m_e E_\nu) \right]^2
+   }{
+     \left(1 - 2m_e E_\nu / M_W^2\right)^2 + \Gamma_W^2 / M_W^2
+   }.
+\end{equation}
+
+Сечение реакции $\bar{\nu}_e e \to \text{адроны})$:
+\begin{equation}
+\frac{d\sigma(\bar{\nu}_e e \to \text{адроны})}{dy} =
+\frac{d\sigma(\bar{\nu}_e e \to \bar{\nu}_\mu \mu)}{dy}
+\frac{\Gamma(W \to \text{адроны})}{\Gamma(W \to \mu \bar{\nu}_\mu)},
+\end{equation}
+где $\Gamma(W \to \text{адроны})$ и $\Gamma(W \to \mu \bar{\nu}_\mu)$ -- ширины распадов $W$ бозона на адроны и $\mu \bar{\nu}_\mu$.
