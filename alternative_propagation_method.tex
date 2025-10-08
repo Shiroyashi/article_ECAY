@@ -1,0 +1,41 @@
+\section{Новый метод решения кинетического уравнения}
+Рассмотрим уравнение переноса нейтрино, учитывая поглощение нейтрино и взаимодействие нейтрино в веществе.
+\begin{equation}
+    \frac{\partial F(E, x)}{\partial x} = -\sigma_{tot}(E)F(E, x) + \int\limits_{0}^1\frac{dy}{1-y}\frac{d\sigma_{tot}}{dy}(E_y, y)F(E_y, x), 
+\end{equation}
+где $E_y = E/(1-y)$ - энергия нейтрино до возможного рассеяния. Перепишем его в виде системы уравнений:
+\begin{equation}
+    \begin{cases}
+         \frac{\partial F(E, x)}{\partial x} = -\sigma_{tot}(E)F(E, x) + Z(E, x)F(E, x),\\
+          Z(E, x) = \int\limits_{0}^1\frac{dy}{1-y}\frac{d\sigma_{tot}}{dy}(E_y, y)F(E_y, x).
+    \end{cases}
+\end{equation}
+Перепишем первое уравнение в интегральном виде:
+\begin{equation}
+    \begin{cases}
+          F(E, x) = F_0(E)\exp{(-\sigma_{tot}(E)x + \int\limits_{0}^1dx_1Z(E, x_1)}),\\
+          Z(E, x) = \int\limits_{0}^1\frac{dy}{1-y}\frac{d\sigma_{tot}}{dy}(E_y, y)F(E_y, x).
+    \end{cases}
+\end{equation}
+\begin{equation}
+    \begin{cases}
+          F(E, x) = F_0(E)\exp{(-\sigma_{tot}(E)x + \int\limits_{0}^1dx_1Z(E, x_1)}),\\
+          Z(E, x) = \int\limits_{0}^1\frac{dy}{1-y}\frac{d\sigma_{tot}}{dy}(E_y, y)F(E_y, x).
+    \end{cases}
+\end{equation}
+Таким образом, мы получаем следующее интегральное уравнение: 
+\begin{equation}
+          F(E, x) = F_0(E)\exp{\left(-\sigma_{tot}(E)x + \int\limits_{0}^1dx_1 \int\limits_{0}^1\frac{dy}{1-y}\frac{d\sigma_{tot}}{dy}(E_y, y)\frac{F(E_y, x)}{F(E,x)}\right)}.
+\end{equation}
+Решаем его итерациями: 
+\begin{equation}
+          F^{(n+1)}(E, x) = F_0(E)\exp{\left(-\sigma_{tot}(E)x + \int\limits_{0}^1dx_1 \int\limits_{0}^1\frac{dy}{1-y}\frac{d\sigma_{tot}}{dy}(E_y, y)\frac{F^{(n)}(E_y, x)}{F^{(n)}(E,x)}\right)}.
+\end{equation}
+В первом приближении имеем: 
+\begin{equation}
+          F^{(1)}(E, x) = F_0(E)\exp{\left(-x\left[\sigma_{tot}(E) -\int\limits_{0}^1dy\frac{d\sigma_{tot}}{dy}(E_y, y)\eta(E, y)\right]\right)},
+\end{equation}
+где 
+\begin{equation}
+    \eta(E,y) = \frac{F_0(E_y)}{(1-y)F_0(E)}.
+\end{equation}
