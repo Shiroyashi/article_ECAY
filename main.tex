@@ -28,12 +28,17 @@
 \tableofcontents
 
 \input{introduction.tex}
-\newpage
-\input{model.tex}
-\newpage
-\input{methods.tex}
+% \newpage
+
+\input{dis}
+\input{nudisxs}
+\input{cross_check_nudisxs}
 \newpage
 \input{dis_reliability.tex}
+%
+\input{nuPropagator}
+\input{cross_check_nupropagator}
+% \input{methods.tex}
 \newpage
 \input{propagation.tex}
 \newpage
@@ -45,7 +50,8 @@
 \newpage
 \input{acknowledgments.tex}
 \appendix
-\input{appStructureFunctions.tex}
+\input{model.tex}
+\input{examples_extrapolated_region.tex}
 % \input{alternative_propagation_method.tex}
 \bibliographystyle{unsrt}
 \bibliography{references}
