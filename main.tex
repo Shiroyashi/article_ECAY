@@ -1,12 +1,30 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
-\usepackage{amsmath,amssymb,graphicx,hyperref}
+\usepackage[russian,english]{babel}
+
+\usepackage{amsmath,amssymb,graphicx}
 \usepackage{geometry}
 \geometry{a4paper,margin=2.5cm}
 \usepackage{bm}
 \usepackage{pgf}
+\usepackage{microtype}
+\emergencystretch=1em
+\sloppy
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\urlstyle{same}
+
+\usepackage[backend=biber,
+  style=numeric,sorting=none,
+  doi=true,url=true,eprint=true,
+  giveninits=true,maxbibnames=20]{biblatex}
+\addbibresource{references.bib}
+\DeclareFieldFormat{doi}{\href{https://doi.org/#1}{DOI:\ #1}}
+\DeclareFieldFormat{eprint:arXiv}{\href{https://arxiv.org/abs/#1}{arXiv:\ #1}}
+
+
 
 \title{Распространение нейтрино высоких энергий через Землю: моделирование и чувствительность к структуре планеты}
 \author{В.~А. Аллахвердян, С.~И. Завьялов, Д.~В. Наумов}
@@ -41,7 +59,8 @@
 \input{appExamples_extrapolated_region.tex}
 \input{appPrem}
 \input{appTomography.tex}
-\bibliographystyle{unsrt}
-\bibliography{references}
+% \bibliographystyle{unsrt}
+% \bibliography{references}
+\printbibliography
 
 \end{document}
